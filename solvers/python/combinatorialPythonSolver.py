@@ -22,7 +22,7 @@ class CombinatorialPythonSolver(AbstractSolver):
         cardinality = 2**len(data)
         masks = self.__convert_number_to_indexes(cardinality)
         data = np.array(list(data))
-        res = list(map(lambda x: data[x].tolist(), masks))
+        res = list(map(lambda x: set(data[x].tolist()), masks))
         return res
      
     def __convert_number_to_indexes(self,cardinality):

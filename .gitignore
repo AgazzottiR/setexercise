@@ -1,6 +1,9 @@
 # Folders to ignore
 data/
 configuration/
+__pycache__/
+.vscode/
+.idea/
 
 # Files to ignore
 *.json

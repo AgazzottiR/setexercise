@@ -24,6 +24,10 @@ class JsonAdapter(AbstractAdapter):
         
         previousLength = len(data["data"])
 
+        if previousLength != 0:
+            if not isinstance(data["data"][0],int):
+                raise ValueError("[Json Adapter] Input data type should be integers")
+
         setData = set(data["data"])
 
         if previousLength != len(setData):
