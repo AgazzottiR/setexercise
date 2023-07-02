@@ -15,7 +15,7 @@ class AbstractSolver(ABC):
         self.solverType = solverType
 
     @abstractmethod
-    def solve(self,params: set) -> set:
+    def solve(self,data: set) -> set:
         """
         Solve method. Takes in a set of values and produces all the sub sets.
 
