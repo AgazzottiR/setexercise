@@ -1,0 +1,7 @@
+# Folders to ignore
+data/
+configuration/
+
+# Files to ignore
+*.json
+
