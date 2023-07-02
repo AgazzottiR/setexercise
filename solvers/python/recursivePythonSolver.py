@@ -1,4 +1,4 @@
-from abstractSolver import AbstractSolver
+from solvers.abstractSolver import AbstractSolver
 
 
 class RecursivePythonSolver(AbstractSolver):

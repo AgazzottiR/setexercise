@@ -1,5 +1,6 @@
 """This module contains helper functions to check  computed results.
 """
+from collections.abc import Iterable
 
 def result_verifier(a,b):
     """ Checks Results. converts subsets in tuple to become hashable types
@@ -12,6 +13,7 @@ def result_verifier(a,b):
     Returns:
         boolean: True if sets are equal, false otherwise
     """
+   
     a = [tuple(val) for val in a]
     a = set(a)
     b = [tuple(val) for val in b]
