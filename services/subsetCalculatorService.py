@@ -1,7 +1,7 @@
-from services.IService import IService
+from services.abstractService import AbstractService
 
 
-class SubSetCalculatorService(IService):
+class SubSetCalculatorService(AbstractService):
     """ Service that computes all the subsets of a set. 
     """
     def __init__(self, configurationPath:str):

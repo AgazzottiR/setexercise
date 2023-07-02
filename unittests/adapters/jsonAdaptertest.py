@@ -7,9 +7,9 @@ class JsonAdapterTest(unittest.TestCase):
         self.filename = "data/testConfigurations/case2/data.json"
         return super().setUp()
 
-    def test_0_load_data_from_test_case(self):
+    def test_0_convert_to(self):
         ja = JsonAdapter()
-        print(ja.load_from_json_file(self.filename))
+        print(ja.convert(self.filename))
 
 
 

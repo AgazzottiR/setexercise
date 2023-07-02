@@ -9,7 +9,7 @@ class JsonAdapter(AbstractAdapter):
     def __init__(self):
         AbstractAdapter.__init__(self,"JsonAdapter")
     
-    def convert(self, data:dict) -> set:
+    def convert(self, data) -> set:
         """
         Converts json loaded data to a set.
         
@@ -19,6 +19,10 @@ class JsonAdapter(AbstractAdapter):
         Return:
             Set of data.
         """
+        if isinstance(data,str):
+            return self.load_from_json_file(data)
+        
+
         if not isinstance(data["data"], Iterable):
             raise ValueError("[Json Adapter] Input data should be at least iterable")
         
