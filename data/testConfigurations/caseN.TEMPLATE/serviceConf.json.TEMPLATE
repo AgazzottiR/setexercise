@@ -1,0 +1,5 @@
+{
+    "solver" : Type of Solver. Possible choices -> [combinatory_python, recursive_python],
+    "input_data_type": How data are provided. Possible choices -> [json],
+    "input_data_path": Path to the file containing the data. Used only if the choosen input_data_type requires an input file. If not use can be left empty
+}
