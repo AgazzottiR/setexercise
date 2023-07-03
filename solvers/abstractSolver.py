@@ -6,13 +6,14 @@ class AbstractSolver(ABC):
        which all the solvers of our problem should rely on.
     """
     @abstractmethod
-    def __init__(self, solverType: str):
+    def __init__(self, solverType: str, profile=True):
         """Constructor method for solver class
 
         Args:
             solverName (string): The name of the solver. 
         """
         self.solverType = solverType
+        self.profile = profile
 
     @abstractmethod
     def solve(self,data: set) -> set:

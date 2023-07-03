@@ -1,6 +1,8 @@
 import unittest
+import sys
 import os
 import pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.parent))
 from services.subsetCalculatorService import SubSetCalculatorService
 from unittests.utils import result_verifier
 import random

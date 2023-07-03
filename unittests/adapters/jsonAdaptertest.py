@@ -1,5 +1,7 @@
 import unittest
-import os
+import sys
+import pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.parent))
 from dataAdapters.jsonAdapter import JsonAdapter
 from unittests.utils import result_verifier
 
