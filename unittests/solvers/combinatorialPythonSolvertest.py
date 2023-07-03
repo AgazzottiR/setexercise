@@ -32,6 +32,16 @@ class CombinatorialPythonSolverTest(unittest.TestCase):
         ret = solver.solve(data)
         print(f"Result[{len(ret)}]")
         self.assertEqual(len(ret),solutionLength)
+    
+        
+    def test_3_simple_case_set_test(self):
+        data = {1,2}
+        solutionLength = 2**len(data)
+        solver = CombinatorialPythonSolver()     
+        print(f"Input -> {data}")
+        ret = solver.solve(data)
+        print(f"Result[{len(ret)}] -> {ret}")
+        self.assertEqual(len(ret),solutionLength)
         
 if __name__ == "__main__":
     unittest.main()
