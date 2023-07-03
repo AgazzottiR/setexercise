@@ -9,6 +9,8 @@ class CombinatorialPythonSolver(AbstractSolver):
         """Constructor method for a CombinatorialPythonSolver Approach.
         """
         AbstractSolver.__init__(self, "CombinatorialPythonSolver")
+        self.MAX_VAL = 2**32
+        self.dataSize = 0
     
     def solve(self, data:set)->set:
         """ Solves the problem using a combinatorial approach.
@@ -19,6 +21,7 @@ class CombinatorialPythonSolver(AbstractSolver):
         Returns:
             list[set]: Result
         """
+        self.dataSize = len(data)
         cardinality = 2**len(data)
         masks = self.__convert_number_to_indexes(cardinality)
         data = np.array(list(data))
@@ -34,10 +37,10 @@ class CombinatorialPythonSolver(AbstractSolver):
         Returns:
             np.ndarray : boolean mask
         """
-        if cardinality > 2**32:
+        if cardinality > self.MAX_VAL:
             raise ValueError("[Combinatorial Solver] Set is too big to be computed.")        
         masks = np.arange(cardinality, dtype=np.uint32)
-        masks = np.unpackbits(masks.view(np.uint8), bitorder="little").reshape(-1,32)[:,:int(np.log2(cardinality))]
+        masks = np.unpackbits(masks.view(np.uint8), bitorder="little").reshape(-1,32)[:,:self.dataSize]
         return masks == 1
 
         

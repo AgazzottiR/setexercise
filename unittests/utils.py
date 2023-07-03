@@ -13,10 +13,10 @@ def result_verifier(a,b):
     Returns:
         boolean: True if sets are equal, false otherwise
     """
-   
-    a = [tuple(val) for val in a]
+    
+    a = [tuple(sorted(val)) for val in a]
     a = set(a)
-    b = [tuple(val) for val in b]
+    b = [tuple(sorted(val)) for val in b]
     b = set(b)
 
     return a == b    

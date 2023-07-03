@@ -7,7 +7,7 @@ class SolverFactory:
     def get_solver(solverName):
         if solverName == "combinatory_python":
             return CombinatorialPythonSolver()
-        elif solverName == "recursive_solver":
+        elif solverName == "recursive_python":
             return RecursivePythonSolver()
         else:
             raise NotImplementedError("[Solver Factory] Solver not found.")

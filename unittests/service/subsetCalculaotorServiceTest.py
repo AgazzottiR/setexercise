@@ -21,7 +21,10 @@ class SubSetCalculatorServiceTest(unittest.TestCase):
         return super().setUp()
     
     def test_0_compute_a_random_configuration(self):
+        """Computes a test.
+        """
         service = SubSetCalculatorService(self.path)
+        print(f"Using -> {service.configuration['solver']}")
         retval = service.run()
         if self.solutionPath is not None:
             with open(self.solutionPath, "r") as f:
